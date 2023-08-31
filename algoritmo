@@ -1,0 +1,53 @@
+from classe import *
+import os
+#def onde ira ser adcionado as tarefas 
+def adicionarDetarefa():
+    str(input("1- digite sua primeira tarefa:"))
+    str(input("2- digite sua segunda tarefa:"))
+    str(input("3- digite sua terceira tarefa:"))
+    str(input("4- digite sua quarta tarefa:"))
+#def de cancelar tarefa
+def cancelarTarefa():
+    pass
+#def onde ira listar suas tarefas
+def listarTarefa():
+    print(f"lista de tarefas {adicionarDetarefa} ")
+    return adicionarDetarefa
+
+
+
+#menu do sofware
+
+def main():
+    while True:
+        try:
+            print("+------------------------------------------+ \n | BEM VINDO(A) AO SOFWARE TAREFAS| \n+------------------------------------------+ \n [1] ADICIONAR TAREFAS \n [2] EXCLUIR TAREFAS \n [3] LISTAR MINHAS TAREFAS \n ")
+
+            escolha = int(input("> "))
+
+            if escolha == 1:
+                os.system("cls")
+                adicionarDetarefa()
+                os.system("pause")
+                os.system("cls")
+                
+
+            elif escolha == 2:
+                os.system("cls")
+                cancelarTarefa()
+                os.system("pause")
+                os.system("cls")
+                
+            elif escolha == 3:
+                os.system("cls")
+                listarTarefa()
+                os.system("pause")
+                os.system("cls")
+                
+            else:
+                print("Opção inválida.")
+                
+
+
+        except ValueError:
+            print('Problema: Digito não correspondente/ Opção Indisponível')
